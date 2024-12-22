@@ -34,10 +34,10 @@ describe("Test MongoDB Driver CRUD", () => {
 
     })
 
-    // teardown
+    // teardown - remove test database & exit mongo connection
     afterAll(async () => {
         await db.dropDatabase()
-        client.close()
+        await client.close()
     })
 
     // TESTS...
