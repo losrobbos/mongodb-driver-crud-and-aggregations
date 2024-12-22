@@ -6,6 +6,8 @@ The tests are executed using the package "vitest".
 
 ## How to run
 
-`npm install`
-`npm test`
+```
+npm install
+npm test
+```
 
