@@ -1,0 +1,20 @@
+{
+  "name": "mongodb_driver_crud_and_aggregations",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "mongodb": "^6.12.0"
+  }
+}
