@@ -2,8 +2,12 @@ import { MongoClient, Db, Collection } from "mongodb";
 import { afterAll, beforeAll, describe, expect, test } from "vitest";
 
 const MONGO_URI = "mongodb://localhost"
+const TEST_DATABASE_NAME = "testing_db"
+const TEST_COLLECTION_NAME = "testing_collection"
 
 describe("Test MongoDB Driver CRUD", () => {
+
+    // global test suite variables (for reuse in testing)
 
     /** @type MongoClient */
     let client
@@ -15,8 +19,8 @@ describe("Test MongoDB Driver CRUD", () => {
     // connect to Mongo Client & create db + collection
     beforeAll(async () => {
         client = await MongoClient.connect(MONGO_URI)
-        db = client.db("palimpalim")
-        coll = await db.createCollection("todos")
+        db = client.db(TEST_DATABASE_NAME)
+        coll = await db.createCollection(TEST_COLLECTION_NAME)
         await coll.insertMany([
             { user: "rob", title: "Do some TDD setup", status: "DONE"},
             { user: "rob", title: "Do some Teardown", status: "DONE"},
